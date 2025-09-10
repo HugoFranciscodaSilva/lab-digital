@@ -1,0 +1,51 @@
+@media (max-width: 450px) {
+    body {
+        flex-direction: column !important;
+    }
+    .menu{
+        width: 100%;
+        flex-direction: row !important;
+        .nav1{
+            display: none;
+        }
+        .nav2{
+            ul{
+                flex-direction: row;
+                gap: 0rem;
+            }
+            li{
+                overflow: hidden;
+                width: 5%;
+            }
+        }
+    }
+    #index1 {
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        .svg{
+            width: 80% !important;
+        }
+    }
+    #index2{
+        flex-direction: column !important;
+        gap: 3rem !important;
+        margin-bottom: 20rem;
+        .graficos{
+            padding-right: 0rem !important;
+            border: none !important;
+        }
+        .cards{
+            flex-direction: column !important;
+        }
+    }
+    #index3{
+        margin-top: 20rem;
+        flex-direction: column !important;
+        height: 50rem !important;
+        padding: 1rem 0;
+        .cards{
+            width: 70% !important;
+        }
+    }
+}
