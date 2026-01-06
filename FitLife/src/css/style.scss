@@ -1,0 +1,384 @@
+$cor: #8a7ed9;
+$cor1: #4946a6;
+$cor3: #282c40;
+$cor4: #3c4973;
+$cor5: #6f92bf;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    display: flex;
+    min-height: 100dvh;
+    width: 100%;
+    height: auto;
+    background-color: $cor3;
+    color:white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    height: 50px;
+}
+nav{
+    width: 7%;
+    min-height: 100dvh;
+    height: auto;
+    box-shadow: 5px 0 10px royalblue;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    #TituloMenu{
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition-duration: 0.5s;
+        img{
+            filter: invert(1);
+            cursor: pointer;
+        }
+    }
+    ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        li{
+            margin-left: 1rem;
+            list-style: none;
+            width: 70%;
+            border-bottom: dashed 1px royalblue;
+            transition-duration: 0.5s;
+            a{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+                text-decoration: none;
+                color: white;
+                transition-duration: 0.5s;
+                img{
+                    filter: grayscale(1);
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+        li:hover{
+            transform: scale(1.15);
+            transition-duration: 0.5s;
+            a{
+                background-color: $cor5;
+                color: $cor3;
+            }
+        }
+    }
+}
+nav.ativo{
+    width: 16%;
+    #TituloMenu{
+        gap: 1.5rem;
+    }
+    ul li{
+        width: 85%;
+        a{
+            gap: 2rem;
+            img{
+                margin: 0;
+            }
+        }
+    } 
+}
+main{
+    margin: 1rem;
+    min-height: 100dvh;
+    height: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h1{
+        background-color: $cor5;
+        color: $cor3;
+        text-align: center;
+        padding: 1rem;
+    }
+    .data{
+        background-color: $cor5;
+        color: $cor3;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    #GraficosSVG{
+        display: flex;
+        justify-content: space-around;
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            width: 30%;
+            border-bottom: 1px dashed $cor5;
+            border-right: 1px dashed $cor5;
+            color: $cor;
+            font-weight: bold;
+            svg{
+                height: auto;
+                transform: rotate(180deg);
+                .progresso-bar{
+                    stroke-width: 0.4rem;
+                    stroke: white;
+                    fill: none;
+                    stroke-dasharray: 440px;
+                    stroke-dashoffset: var(--progresso);
+                    stroke-linecap: round;
+                    animation: Progresso 0.75s ease-in-out;
+                }
+                .bar{
+                    stroke-width: 0.7rem;
+                    stroke: $cor5;
+                    fill: none;
+                }
+            }
+        }
+    }
+    #CardsEGrafico{
+        display: flex;
+        justify-content: space-between;
+        height: 40dvh;
+        width: 100%;
+        .Grafico{
+            height: 100%;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .Graficos{
+                height: 80%;
+                display: flex;
+                align-items: flex-end;
+                gap: 0.5rem;
+                border-right: 1px dashed $cor5;
+                div{
+                    display: flex;
+                    width: 3rem;
+                    justify-content: center;
+                    align-items: flex-end;
+                    background-color: $cor1;
+                    height: var(--altura);
+                    position: relative;
+                    span:nth-child(2){
+                        position: absolute;
+                        top: -1.5rem;
+                    }
+                }
+            }
+        }
+        .cards{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            .card{
+                width: 35%;
+                height: 70%;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px black;
+                padding: 0 1rem;
+                transition-duration: 0.5s;
+                h2{
+                    border-bottom: 1px dashed $cor5;
+                    margin-bottom: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+            .card:hover{
+                background-color: $cor5;
+                color: $cor3;
+                transform: scale(1.1);
+            }
+        }
+    }
+    #Flippers{
+        display: flex;
+        box-shadow: 0px 0px 10px royalblue;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50dvh;
+        gap: 2rem;
+        .flipper{
+            display: flex;
+            width: 25%;
+            background-color: $cor4;
+            height: 80%;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+            border-radius: 10px;
+            .flip{
+                display: flex;
+                width: 90%;
+                height: 90%;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                transform-style: preserve-3d;
+                transition-duration: 0.95s;
+                .costas{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $cor3;
+                    position: absolute;
+                    backface-visibility: hidden;
+                    transform: rotateY(180deg);
+                    height: 100%;
+                    width: 100%;
+                }
+                .frente{
+                     display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $cor5;
+                    position: absolute;
+                    backface-visibility: hidden;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .flip:hover{
+                transform: rotateY(180deg);
+            }
+        }
+    }
+    #Infos{
+        height: 25dvh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .info{
+            width: 20%;
+            height: 85%;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px black;
+            padding: 0 1rem;
+            transition-duration: 0.5s;
+            h2{
+                border-bottom: 1px dashed $cor5;
+                margin-bottom: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 1.2rem;
+            }
+        }
+        .info:hover{
+            background-color: $cor5;
+            color: $cor3;
+            transform: scale(1.1);
+        }
+    }
+    #Formulário{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 1rem;
+        h2{
+            color: royalblue;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            input{
+                width: 98%;
+                padding: 0.9rem;
+                border-radius: 10px;
+                border: none;
+                background-color: rgb(32, 32, 32);
+                color: white;
+            }
+            input::placeholder{
+                color: white;
+            }
+        }
+        button{
+            cursor: pointer;
+            width: 15%;
+            background-color: royalblue;
+            border: none;
+            border-radius: 8px;
+            color: black;
+            padding: 0.7rem;
+            
+        }
+    }
+    #Perfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        picture{
+            height: 20dvh;
+            margin-bottom: 1rem;
+            border: 0.5rem solid royalblue;
+            border-radius: 50%;
+            img{
+                height: 100%;
+            }
+        }
+    }
+    #Sincronização{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h2{
+            color: royalblue;
+        }
+        .Relogios{
+            display: flex;
+            justify-content: space-around;
+        }
+        .Relogio{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            img{
+                height: 100px;
+            }
+            button{
+                color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                border: none;
+                background-color: $cor;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@keyframes Progresso {
+    0%{
+        stroke-dashoffset: 440;
+    }
+    100%{
+        stroke-dashoffset: var(--progresso);
+    }
+}

@@ -1,0 +1,448 @@
+@charset "UTF-8";
+*:not(dialog) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: 10dvh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ff5722;
+  color: white;
+}
+header nav {
+  display: flex;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  list-style: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid white;
+}
+header nav ul li a {
+  height: 100%;
+  width: 100%;
+  color: black;
+  filter: invert(1);
+  text-decoration: none;
+}
+header nav ul li:hover {
+  border-bottom: none;
+  border-top: 1px solid white;
+}
+
+main {
+  margin-bottom: 5rem;
+}
+
+#Hero {
+  height: 50dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Hero .Welcome {
+  width: 80%;
+  height: 80%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 1rem;
+  transition-duration: 0.5s;
+}
+#Hero .Welcome .Plano {
+  width: 95%;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d0d0d0;
+  border-radius: 10px;
+}
+#Hero .Welcome .Plano .Laranja {
+  background-color: #ff5722;
+  color: white;
+  border-radius: 10px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+#Hero .Welcome .Plano .Laranja img {
+  filter: invert(1);
+}
+#Hero .Welcome .Plano .Plano-Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  height: 80%;
+  width: 30%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+#Hero .Welcome .Plano .Plano-Card strong {
+  color: #58c2b5;
+}
+#Hero .Welcome:hover {
+  transform: translateY(-1.1rem);
+}
+
+#Carrossel {
+  height: 45dvh;
+  width: 100%;
+}
+#Carrossel .carrossel {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#Carrossel .carrossel .carrossel-track {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#Carrossel .carrossel .carrossel-track .carrossel-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#Carrossel .carrossel .carrossel-track .carrossel-item img {
+  height: 100%;
+  width: 100%;
+}
+#Carrossel .carrossel .carrossel-track .carrossel-item.ativo {
+  opacity: 1;
+}
+#Carrossel .carrossel .next {
+  right: 2%;
+}
+#Carrossel .carrossel .prev {
+  left: 2%;
+}
+#Carrossel .carrossel .next, #Carrossel .carrossel .prev {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+#Graficos {
+  height: 40dvh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#Graficos .Progresso {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 80%;
+  width: 30%;
+  border-radius: 10px;
+  padding: 1rem;
+  transition-duration: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#Graficos .Progresso .bar {
+  width: 100%;
+  height: 20%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
+}
+#Graficos .Progresso .progresso-bar {
+  height: 100%;
+  width: var(--largura);
+  background-color: var(--fundo);
+  border-radius: 0 10px 0 0;
+}
+#Graficos .Progresso p {
+  font-size: 2.5rem;
+}
+#Graficos .Progresso:hover, #Graficos .dias:hover {
+  transform: translateY(-1.1rem);
+}
+#Graficos .dias {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: 80%;
+  width: 30%;
+  border-radius: 10px;
+  padding: 0.5rem;
+  transition-duration: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#Graficos .dias h2 {
+  font-size: 1rem;
+}
+#Graficos .dias .dia {
+  background-color: #ff5722;
+  height: 10%;
+  width: var(--dia);
+}
+
+#Exercícios {
+  height: 25dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Exercícios div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
+}
+#Exercícios div:hover {
+  transform: translateY(-1.1rem);
+}
+
+#Cards {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#Cards div {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+#Cards div img {
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+}
+#Cards div button {
+  background-color: #ff5722;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+#Cards div button.ativo {
+  background-color: #58c2b5;
+}
+#Cards div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#Perfil {
+  height: 80dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Perfil .Perfil {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 85%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+#Perfil .Perfil .Cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+}
+#Perfil .Perfil .Cards .card {
+  width: 15%;
+  height: 60%;
+  background-color: lightgray;
+  border-top: 1rem solid #58c2b5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px 10px 0 0;
+  transition-duration: 0.5s;
+}
+#Perfil .Perfil .Cards picture {
+  height: 40%;
+}
+#Perfil .Perfil .Cards picture img {
+  border-radius: 10px;
+  height: 100%;
+}
+#Perfil .Perfil .Cards picture:hover {
+  transform: scale(1.2);
+}
+#Perfil .Perfil .Cards .card:hover {
+  background-color: #58c2b5;
+}
+#Perfil .Perfil button {
+  cursor: pointer;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff5722;
+  color: white;
+}
+
+#Dicas {
+  min-height: 80dvh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+#Dicas .dicas {
+  width: 100%;
+  height: 17dvh;
+  border-top: 1rem solid #58c2b5;
+  border-radius: 10px;
+  display: flex;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
+}
+#Dicas .dicas p {
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+}
+#Dicas .dicas:hover {
+  transform: translateY(-0.5rem);
+}
+
+#Localização {
+  height: 80dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Localização section {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  border-top: 1rem solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  justify-content: space-around;
+  align-items: center;
+}
+#Localização section .infos {
+  width: 45%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+#Localização section .infos div {
+  width: 100%;
+  border-bottom: 0.2rem dotted black;
+}
+#Localização section .infos div p {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#Localização section .infos div img {
+  transform: scale(1.7);
+  margin-bottom: 0.5rem;
+}
+#Localização section .mapa {
+  height: 80%;
+  border: 0.15rem dotted black;
+  width: 45%;
+  border-radius: 10px;
+}
+#Localização section .mapa img {
+  height: 100%;
+  width: 100%;
+}
+#Localização section:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+}
+dialog div {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+dialog div button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+dialog section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+dialog section div {
+  background-color: #58c2b5;
+  border-right: 0.25rem solid #ff5722;
+  border-radius: 8px;
+  color: white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: end;
+  width: var(--modal);
+  animation: modal 1s ease-in-out;
+}
+
+footer {
+  background-color: #ff5722;
+  color: white;
+  height: 7dvh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes modal {
+  from {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <title>Academia Vida Ativa - Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>A.V.A</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span><img src="src/icons/icon-home.svg" alt="Home"></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="src/pages/exercicios.html">
+                        <span><img src="src/icons/icon-person.svg" alt="Exercícios"></span>
+                        <span>Exercícios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="src/pages/perfil.html">
+                        <span><img src="src/icons/icon-account.svg" alt="Perfil"></span>
+                        <span>Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="src/pages/dicas.html">
+                        <span><img src="src/icons/icon-dicas.svg" alt="Dicas"></span>
+                        <span>Dicas de Saúde</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="src/pages/localização.html">
+                        <span><img src="src/icons/icon-mapa.svg" alt="Localização"></span>
+                        <span>Localização</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Hero">
+            <section class="Welcome">
+                <h2>Bem-vindo, [Nome do Aluno]! Hoje é 27 de março de 2025</h2>
+                <p>Veja seus dados e sugestões de novos exercícios abaixo.</p>
+                <section class="Plano">
+                    <div class="Laranja">
+                        <img src="src/icons/icon-fale.svg" alt="Fale">
+                        <p>Contato</p>
+                    </div>
+                    <div class="Laranja">
+                        <img src="src/icons/icon-beneficio.svg" alt="Beneficio">
+                        <p>Benefícios</p>
+                    </div>
+                    <div class="Plano-Card">
+                        <p>Plano Atual: Premium Ouro</p>
+                        <p>Mensalidade Março: <strong>OK</strong></p>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section id="Carrossel">
+            <div class="carrossel">
+                <div class="prev">&lt;</div>
+                <div class="carrossel-track">
+                    <div class="carrossel-item ativo"><img src="src/images/banner3.jpg" alt="Homem e Mulher treinando"></div>
+                    <div class="carrossel-item"><img src="src/images/banner2.jpg" alt="Mulher Treinando"></div>
+                    <div class="carrossel-item"><img src="src/images/banner4.jpg" alt="Pessoas Treinando"></div>
+                </div>
+                <div class="next">&gt;</div>
+            </div>
+        </section>
+        <section id="Graficos">
+            <section class="Progresso">
+                <h2>Progresso de Processos</h2>
+                <div class="bar">
+                    <div class="progresso-bar" style="--fundo: #58c2b5; --largura:75%;"></div>
+                </div>
+                <p>75%</p>
+            </section>
+            <section class="Progresso">
+                <h2>Distribuição de Atividades</h2>
+                <div class="bar">
+                    <div class="progresso-bar" style="--fundo: #f0ad24; --largura:50%;"></div>
+                </div>
+                <p>50%</p>
+            </section>
+            <section class="dias">
+                <h2>Histórico de Treinos/Horas</h2>
+                <div class="dia" style="--dia:40%;">
+                    <span>Sábado 3</span>
+                </div>
+                <div class="dia" style="--dia:80%;">
+                    <span>Domingo 6</span>
+                </div>
+                <div class="dia" style="--dia:30%;">
+                    <span>Segunda 2</span>
+                </div>
+                <div class="dia" style="--dia:30%">
+                    <span>Terça 2</span>
+                </div>
+                <div class="dia" style="--dia:50%;">
+                    <span>Quarta 4</span>
+                </div>
+                <div class="dia" style="--dia:20%;">
+                    <span>Quinta 1</span>
+                </div>
+                <div class="dia" style="--dia:30%;">
+                    <span>Sexta 2</span>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Telefone: (XX) XXXXX-XXXX</p>
+    </footer>
+    <script src="src/scripts/script.js"></script>
+</body>
+</html>
